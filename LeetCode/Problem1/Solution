@@ -1,0 +1,7 @@
+
+# Solution 1
+select min(Salary) as SecondHighestSalary  from (select Salary ,DENSE_RANK() OVER(ORDER BY Salary desc) as sal from Employee) s where s.sal = 2
+
+# Solution 2
+
+SELECT  MAX(salary) AS SecondHighestSalary FROM Employee WHERE salary < (SELECT MAX(salary) FROM Employee);
