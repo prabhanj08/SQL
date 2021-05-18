@@ -1,0 +1,4 @@
+select Name Employee from Employee e
+where
+e.ManagerId is not null and
+e.Salary > (select Salary from Employee where Id=e.ManagerId)
