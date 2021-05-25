@@ -1,0 +1,1 @@
+DELETE FROM  Person WHERE Id IN (select Id from(select Id,Email ,ROW_NUMBER() OVER (PARTITION BY Email ORDER BY Id ASC) as rn from Person ) s  where s.rn > 1)
