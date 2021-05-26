@@ -1,0 +1,11 @@
+SELECT DISTINCT Num as ConsecutiveNums
+FROM
+(
+SELECT
+Num,
+LAG(Num) OVER () AS prev_val,
+LEAD(Num) OVER () as next_val
+FROM
+Logs
+) T1
+WHERE Num = prev_val and Num = next_val
