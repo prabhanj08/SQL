@@ -1,0 +1,1 @@
+select class from (select class,count(DISTINCT(student)) as cnt from courses group by class) c where c.cnt >=5
