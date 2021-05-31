@@ -1,0 +1,1 @@
+select s.Department,s.Employee,s.Salary from (select d.Name as Department,e.Name as Employee, e.Salary, DENSE_RANK() OVER (partition by d.ID order by e.Salary desc) as rk from Employee e JOIN Department d ON e.DepartmentId = d.Id) s where rk in ('1','2','3')
