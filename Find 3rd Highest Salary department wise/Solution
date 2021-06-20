@@ -1,0 +1,1 @@
+select e.deptid,e.salary from (select deptid,salary,dense_rank() over(partiton by deptid, order by sal desc) as sal_rnk from employee) e where e.sal_rnk = 3
