@@ -1,0 +1,5 @@
+We have an employee table as below
+
+ID, EMPNAME, SALARY, DEPTID
+
+Need to find 3rd max salary at each department level and display
