@@ -1,0 +1,17 @@
+We have two columns(Revenue and Cost Price) in a table like below, get me the Profit column
+
+Revenue table
+
+Revenue   Cost Price    
+100          Null     
+200          20        
+300          50         
+Null         50       
+
+Expected Result
+
+Revenue   Cost Price     Profit
+100          Null         100
+200          20           180
+300          50           250
+Null         50           -5
