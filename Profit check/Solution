@@ -1,0 +1,6 @@
+solution 1:
+
+select Revenue,Cost Price , (ISNULL(Revenue,0) - ISNULL(Cost Price,0)) as Profit from Revenue
+
+solution2:
+select Revenue,Cost Price , (COALSEC(Revenue,0) - COALSEC(Cost Price,0)) as Profit from Revenue
