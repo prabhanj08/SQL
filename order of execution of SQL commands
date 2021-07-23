@@ -1,0 +1,11 @@
+Order of execution for an SQL query
+1) FROM, including JOINs
+2) WHERE
+3) GROUP BY
+4) HAVING
+5) WINDOW Functions
+6) SELECT
+7) DISTINCT
+8) UNION
+9) ORDER BY
+10) LIMIT AND OFFSE
